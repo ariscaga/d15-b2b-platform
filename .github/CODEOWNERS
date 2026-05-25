@@ -1,0 +1,31 @@
+# CODEOWNERS for d15-b2b-platform
+#
+# Order matters: the LAST matching pattern wins for a given file.
+# Patterns follow gitignore syntax.
+#
+# Every PR will auto-request review from the listed owners for files they own.
+# When "Require review from Code Owners" is enabled in branch protection,
+# changes to owned files require approval from the owner.
+
+# Default owner — catches everything not matched below
+*                                   @ariscaga
+
+# Database & migrations — security-critical, never bypass review
+/supabase/migrations/               @ariscaga
+/supabase/functions/                @ariscaga
+
+# RLS policies and auth — most sensitive code in the repo
+**/rls/                             @ariscaga
+**/auth/                            @ariscaga
+
+# Billing & Stripe — financial logic
+**/billing/                         @ariscaga
+**/stripe/                          @ariscaga
+
+# Demo session token logic — public-facing attack surface
+**/demo/                            @ariscaga
+
+# CI/CD and infrastructure config
+/.github/                           @ariscaga
+/vercel.json                        @ariscaga
+/supabase/config.toml               @ariscaga
