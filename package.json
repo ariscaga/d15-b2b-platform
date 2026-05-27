@@ -8,9 +8,11 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:rls": "npx tsx tests/rls.test.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -23,6 +25,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "tsx": "^4.22.3",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10"
